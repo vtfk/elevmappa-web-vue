@@ -61,6 +61,7 @@ export default new Vuex.Store({
     GET_STUDENT: async (context, payload) => {
       try {
         context.commit('SET_LOADING', true)
+        context.commit('SET_STUDENT', {})
         const { data } = await getData(`/students/${payload}`)
         context.commit('SET_STUDENT', data)
         context.commit('SET_LOADING', false)

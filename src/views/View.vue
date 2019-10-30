@@ -8,7 +8,7 @@
         <v-card>
 
           <v-card-title primary-title>
-            <h3 class="headline">{{ student.fullName }}</h3>
+            <h3 class="headline">{{ loading ? 'Laster ...' : student.fullName }}</h3>
           </v-card-title>
 
           <v-card-text>

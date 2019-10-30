@@ -1,0 +1,21 @@
+{
+  "version": 2,
+  "name": "elevmappa-web",
+  "scope": "telemark",
+  "alias": "elevmappa-test.vtfk.no",
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@now/static-build"
+    }
+  ],
+  "build": {
+    "env": {
+      "VUE_APP_ELEVMAPPA_PROD_URL": "https://elevmappa-test.vtfk.no"
+    }
+  },
+  "routes": [
+    { "handle": "filesystem" },
+    { "src": "/.*", "dest": "/index.html" }
+  ]
+}

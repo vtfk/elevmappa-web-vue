@@ -87,8 +87,8 @@ export default new Vuex.Store({
 
       try {
         context.commit('SET_PDF_FILE_LOADING', true)
-        const { file: fileId, recno } = payload
-        const { data: { file: base64File } } = await getData(`/files/${fileId}/${recno}`)
+        const { file: fileId, recno, source } = payload
+        const { data: { file: base64File } } = await getData(`/files/${source}/${fileId}/${recno}`)
         const pdfFile = base64toUint8(base64File)
         const { numPages } = await pdf.createLoadingTask(pdfFile)
         context.commit('SET_PDF_FILE', { data: pdfFile, numPages, fileId })

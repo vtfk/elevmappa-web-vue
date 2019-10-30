@@ -58,14 +58,14 @@
               <template v-slot:expanded-item="{ headers, item }">
                 <td :colspan="headers.length">
                   <v-card flat tile>
-                    <v-card-text :key="item.file.recno" v-for="item in item.files" style="color: black !important">
-                      <b>Dato</b>: {{ item.date || 'Ukjent' }}<br/>
-                      <b>Fra</b>: {{ item.from || 'Ukjent' }}<br/>
-                      <b>Til</b>: {{ item.to || 'Ukjent' }}<br/>
+                    <v-card-text :key="file.recno" v-for="file in item.files" style="color: black !important">
+                      <b>Dato</b>: {{ file.date || 'Ukjent' }}<br/>
+                      <b>Fra</b>: {{ file.from || 'Ukjent' }}<br/>
+                      <b>Til</b>: {{ file.to || 'Ukjent' }}<br/>
                       <v-divider style="margin-bottom: 10px"></v-divider>
-                      <span @click="GENERATE_PREVIEW(item)">
+                      <span @click="GENERATE_PREVIEW({ ...file, source: item.source })">
                         <v-progress-circular
-                          v-if="pdfFileLoading === item.recno"
+                          v-if="pdfFileLoading === file.recno"
                           size="16"
                           width="3"
                           indeterminate

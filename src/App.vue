@@ -66,4 +66,7 @@ tr:hover {
 #app p a {
   color: black;
 }
+html {
+  overflow: auto;
+}
 </style>

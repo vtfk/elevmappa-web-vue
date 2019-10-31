@@ -63,7 +63,7 @@
                       <b>Fra</b>: {{ file.from || 'Ukjent' }}<br/>
                       <b>Til</b>: {{ file.to || 'Ukjent' }}<br/>
                       <v-divider style="margin-bottom: 10px"></v-divider>
-                      <span @click="GENERATE_PREVIEW({ ...file, source: item.source })">
+                      <span @click="GENERATE_PREVIEW({ ...file, source: item.source, studentId: student.userName })">
                         <v-progress-circular
                           v-if="pdfFileLoading === file.recno"
                           size="16"

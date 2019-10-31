@@ -10,13 +10,13 @@ WORKDIR /app
 COPY package*.json ./
 
 # install project dependencies
-RUN npm install
+RUN npm install --production
 
 # copy project files and folders to the current working directory (i.e. 'app' folder)
 COPY . .
 
 # build app for production with minification
-EXPOSE 8080
+RUN npm run build
 
-# needs entrypoint to rebuild with correct envs
-CMD /app/entrypoint.sh
+EXPOSE 8080
+CMD [ "http-server-spa", "dist" ]

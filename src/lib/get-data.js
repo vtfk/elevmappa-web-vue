@@ -5,7 +5,7 @@ const https = require('https')
 
 const instance = axios.create({
   baseURL: config.apiUrl,
-  timeout: 5000,
+  timeout: Number(config.apiTimeout) * 1000,
   httpsAgent: new https.Agent({ keepAlive: true })
 })
 

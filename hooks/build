@@ -1,0 +1,12 @@
+#!/bin/bash
+
+echo "------ HOOK START - BUILD -------"
+printenv
+
+# ENV VARs are set by the cloud.docker.com build process, and are available during automated builds, automated tests,
+# and while executing hooks like here.
+# DOCKER_TAG: the Docker repository tag being built.
+# https://docs.docker.com/docker-hub/builds/advanced/
+docker build -t elevmappa-web --build-arg VUE_APP_AUTH_AUTHORITY=$VUE_APP_AUTH_AUTHORITY --build-arg VUE_APP_AUTH_CLIENT_ID=$VUE_APP_AUTH_CLIENT_ID --build-arg VUE_APP_ELEVMAPPA_API_URL=$VUE_APP_ELEVMAPPA_API_URL --build-arg VUE_APP_ELEVMAPPA_PROD_URL=$VUE_APP_ELEVMAPPA_PROD_URL .
+
+echo "------ HOOK END   - BUILD -------"

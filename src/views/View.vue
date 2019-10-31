@@ -84,12 +84,13 @@
               </template>
 
               <v-alert slot="no-data" dark :value="true" v-if="loading !== true" color="error" icon="mdi-alert">
-                Du har ikke tilgang til noen elever. Ta kontakt med administrativt personale på din skole.
+                Du har ikke tilgang til denne eleven. <br/>
+                Ta kontakt med administrativt personale på din skole dersom du mener dette er en feil.
               </v-alert>
 
               <v-alert slot="no-results" dark :value="true" color="error" icon="mdi-alert">
                 Ditt søk etter "{{ search }}" fikk ingen resultater.<br/>
-                Finner du ikke eleven du leter etter, ta kontakt med den som er ansvarlig for Extens eller administrativt personale på din skole.
+                Finner du ikke det du leter etter, ta kontakt med administrativt personale på din skole.
               </v-alert>
 
             </v-data-table>

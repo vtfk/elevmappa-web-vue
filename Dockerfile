@@ -1,5 +1,17 @@
 FROM node:lts-alpine
 
+MAINTAINER Jonas aka Lord Maccyber
+
+# Set args
+ARG VUE_APP_AUTH_CLIENT_ID
+ARG VUE_APP_ELEVMAPPA_API_URL
+ARG VUE_APP_ELEVMAPPA_PROD_URL
+
+# Set envs
+ENV VUE_APP_AUTH_CLIENT_ID $VUE_APP_AUTH_CLIENT_ID
+ENV VUE_APP_ELEVMAPPA_API_URL $VUE_APP_ELEVMAPPA_API_URL
+ENV VUE_APP_ELEVMAPPA_PROD_URL $VUE_APP_ELEVMAPPA_PROD_URL
+
 # install simple http server for serving static content
 RUN npm install -g http-server-spa
 

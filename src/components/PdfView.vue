@@ -5,7 +5,7 @@
     <div :style="'width:' + zoom + '%'" ref="pdfview" class="wrapper" :class='{"zoom-active": zoom > 100 }'>
       <pdf
         v-for="i in pdfFile.numPages"
-        style="height: vh; width: 100vw"
+        style="width: 100%;"
         :src="pdfFile.data"
         :page="i"
         :key="i"
@@ -76,7 +76,7 @@ export default {
   -moz-overflow-scrolling: touch;
   -ms-overflow-scrolling: touch;
   overflow-scrolling: touch;
-  overflow: auto;
+  overflow: hidden !important;
 }
 .transparent-snack {
   opacity: 0.5;

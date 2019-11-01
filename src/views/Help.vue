@@ -6,6 +6,9 @@
           <v-flex xs12>
             <v-card>
               <v-card-title primary-title>
+                <v-btn to="/" class="ma-5" color="primary" dark fab small>
+                  <v-icon>mdi-arrow-left</v-icon>
+                </v-btn>
                 <div class="headline text-uppercase">Spørsmål og svar</div>
               </v-card-title>
               <v-card-text>

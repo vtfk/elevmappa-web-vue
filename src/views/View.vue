@@ -8,6 +8,9 @@
         <v-card>
 
           <v-card-title primary-title>
+            <v-btn to="/" class="ma-5" color="primary" dark fab small>
+              <v-icon>mdi-arrow-left</v-icon>
+            </v-btn>
             <h3 class="headline">{{ loading ? 'Laster ...' : student.fullName }}</h3>
           </v-card-title>
 

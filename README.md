@@ -1,6 +1,6 @@
 # elevmappa-web
 
-## Project setup
+## Local setup
 ```
 npm install
 ```
@@ -32,6 +32,26 @@ npm run test:unit
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+## Docker local build
+
+### Build docker
+```
+docker build --tag elevmappa-web .
+```
+
+### Run docker
+```
+docker run -d -p 8080:8080 -it elevmappa-web
+```
+
+## Dockerhub image
+
+Create a **private repo** on [dockerhub](https://hub.docker.com/).
+
+In "configure automated build" set desired environment variables.
+
+![Dockerhub](https://i.imgur.com/pGtdo1J.png)
 
 # License
 [MIT](LICENSE)

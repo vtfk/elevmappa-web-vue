@@ -53,5 +53,10 @@ In "configure automated build" set desired environment variables.
 
 ![Dockerhub](https://i.imgur.com/pGtdo1J.png)
 
+
+# Flow
+
+![draw.io](https://i.imgur.com/fVFHw45.png)
+
 # License
 [MIT](LICENSE)

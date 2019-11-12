@@ -66,21 +66,23 @@
                       <b>Fra</b>: {{ file.from || 'Ukjent' }}<br/>
                       <b>Til</b>: {{ file.to || 'Ukjent' }}<br/>
                       <v-divider style="margin-bottom: 10px"></v-divider>
-                      <span @click="GENERATE_PREVIEW({ ...file, source: item.source, studentId: student.userName })">
-                        <v-progress-circular
-                          v-if="pdfFileLoading === file.recno"
-                          size="16"
-                          width="3"
-                          indeterminate
-                          color="accent"
-                        ></v-progress-circular>
-                        <v-icon
-                          v-else
-                          style="height: 16px"
-                        >
-                        mdi-attachment
-                        </v-icon> {{ item.title }}
-                      </span>
+
+                      <v-btn
+                        outlined
+                        color="primary"
+                        :disabled="pdfFileLoading === file.recno"
+                        title="Klikk for å åpne filen"
+                        @click="GENERATE_PREVIEW({ ...file, source: item.source, studentId: student.userName })"
+                      >
+                        <v-span v-if="pdfFileLoading === file.recno">
+                          <v-progress-circular size="20" width="3" indeterminate></v-progress-circular>
+                          Åpner dokumentet...
+                        </v-span>
+                        <v-span v-else>
+                          <v-icon style="height: 16px">mdi-attachment</v-icon>
+                          {{ item.title }}
+                        </v-span>
+                      </v-btn>
                     </v-card-text>
                   </v-card>
                 </td>

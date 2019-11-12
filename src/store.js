@@ -87,8 +87,8 @@ export default new Vuex.Store({
         pdfFile ? new Uint8Array(atob(pdfFile).split('').map(c => c.charCodeAt(0))) : ''
 
       try {
-        context.commit('SET_PDF_FILE_LOADING', true)
         const { file: fileId, recno, source, studentId } = payload
+        context.commit('SET_PDF_FILE_LOADING', recno)
         const { data: { file: base64File } } = await getData(`/files/${source}/${fileId}/${recno}/${studentId}`)
         const pdfFile = base64toUint8(base64File)
         const { numPages } = await pdf.createLoadingTask(pdfFile)

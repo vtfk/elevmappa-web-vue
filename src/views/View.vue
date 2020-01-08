@@ -62,9 +62,11 @@
                 <td :colspan="headers.length">
                   <v-card flat tile>
                     <v-card-text :key="file.recno" v-for="file in item.files" style="color: black !important">
-                      <b>Dato</b>: {{ file.date || 'Ukjent' }}<br/>
+                      <b>Dato</b>: {{ item.displayDate || 'Ukjent' }}<br/>
+                      <b>Dok. nr.</b>: {{ file.file || 'Ukjent' }} {{ item.source ? `(${item.source})` : '' }}<br/>
                       <b>Fra</b>: {{ file.from || 'Ukjent' }}<br/>
                       <b>Til</b>: {{ file.to || 'Ukjent' }}<br/>
+
                       <v-divider style="margin-bottom: 10px"></v-divider>
 
                       <v-btn
@@ -137,11 +139,10 @@ export default {
         value: 'data-table-expand'
       },
       {
-        text: 'Dok. nr.',
+        text: 'Sendt dato',
         sortable: true,
-        value: 'docId',
-        sort: (a, b) => Number(a.match(/\d/g).join('')) > Number(b.match(/\d/g).join('')) ? -1 : 1,
-        hide: true
+        value: 'displayDate',
+        sort: (a, b) => new Date(a.date) > new Date(b.date) ? -1 : 1
       },
       {
         text: 'Tittel',
@@ -151,7 +152,8 @@ export default {
     ],
     pagination: {
       rowsPerPage: 8,
-      sortBy: 'sortId',
+      sortBy: 'date',
+      descending: true,
       page: 1
     }
   }),

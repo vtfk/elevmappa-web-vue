@@ -60,7 +60,7 @@
             v-model="pagination.page"
             circle
             color="primary"
-            :total-visible="7"
+            :total-visible="10"
             prev-icon="mdi-menu-left"
             next-icon="mdi-menu-right"
             :length="Math.round(students.length / pagination.rowsPerPage)"

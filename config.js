@@ -6,7 +6,8 @@ const getAuthConfig = (url = 'http://localhost:8080') => ({
     responseType: process.env.VUE_APP_AUTH_RESPONSE_TYPE || 'id_token token',
     scope: process.env.VUE_APP_AUTH_SCOPE || 'openid profile email',
     automaticSilentRenew: process.env.VUE_APP_AUTH_SILENT_RENEW || false,
-    silentRedirectUri: process.env.VUE_APP_AUTH_SILENT_URI || `${url}/silent-renew-oidc.html`
+    silentRedirectUri: process.env.VUE_APP_AUTH_SILENT_URI || `${url}/silent-renew-oidc.html`,
+    prompt: process.env.VUE_APP_AUTH_PROMPT || 'login'
   }
 })
 

@@ -13,7 +13,7 @@
               </v-card-title>
               <v-card-text>
                 <p>Nedenfor finner du ofte stilte spørsmål, svar og hurtigtaster.</p>
-                <p>Feil, mangler og ønsker kan du sende til <a href="mailto:post.opplaring@t-fk.no" title="Send e-post til post@fylkeskommune.no" target="_blank">post@fylkeskommune.no</a></p>
+                <p>Feil, mangler og ønsker kan du sende til <a href="mailto:post.opplaring@vtfk.no" title="Send e-post til post.opplaring@vtfk.no" target="_blank">post.opplaring@vtfk.no</a></p>
                 <div class="title text-uppercase">Om Elevmappa</div>
                 <br />
                 <p>Elevmappa gir deg mulighet til å søke opp elevene du er kontakt- og faglærer for.<br/>I elevmappene vil du finne dokumenter som tilhører eleven.</p>
@@ -25,7 +25,7 @@
                 <p><b>Jeg mangler leserettigheter til et dokument jeg mener jeg bør lese.</b></p>
                 <p>Ta kontakt med din nærmeste leder som vil undersøke om du har rett til innsyn i dokumentet.</p>
                 <p><b>Jeg får melding om "Finner ikke elevmappe. Kontakt arkivet"</b></p>
-                <p>Ta kontakt med arkivet på e-post: post.arkiv@t-fk.no eller tlf. 35 91 70 11</p>
+                <p>Ta kontakt med arkivet på e-post: <a href="mailto:7013@vtfk.no" target="_blank">7013@vtfk.no</a> eller tlf. 35 91 70 13</p>
                 <div class="title text-uppercase">Hurtigtaster</div>
                 <br />
                 <p><strong>Dokumentvisning</strong></p>

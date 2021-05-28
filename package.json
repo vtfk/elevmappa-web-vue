@@ -43,7 +43,7 @@
     "vuex-oidc": "3.3.1"
   },
   "devDependencies": {
-    "@babel/preset-env": "7.14.2",
+    "@babel/preset-env": "7.14.4",
     "@vue/cli-plugin-babel": "4.0.5",
     "@vue/cli-plugin-eslint": "4.0.5",
     "@vue/cli-plugin-pwa": "4.0.5",

@@ -50,7 +50,7 @@
 
           <v-alert slot="no-results" dark :value="true" color="error" icon="mdi-alert">
             Ditt søk etter "{{ search }}" fikk ingen resultater.<br/>
-            Finner du ikke eleven du leter etter, ta kontakt med den som er ansvarlig for Extens eller administrativt personale på din skole.
+            Finner du ikke eleven du leter etter, ta kontakt med den som er ansvarlig for Visma InSchool eller administrativt personale på din skole.
           </v-alert>
         </v-data-table>
 

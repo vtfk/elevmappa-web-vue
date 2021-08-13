@@ -21,7 +21,7 @@
                 <div class="title text-uppercase">Spørsmål</div>
                 <br />
                 <p><b>Jeg finner ikke eleven jeg leter etter.</b></p>
-                <p>Finner du ikke eleven du leter etter, ta kontakt med den som er ansvarlig for Extens eller administrativt personale på din skole.</p>
+                <p>Finner du ikke eleven du leter etter, ta kontakt med den som er ansvarlig for Visma InSchool eller administrativt personale på din skole.</p>
                 <p><b>Jeg mangler leserettigheter til et dokument jeg mener jeg bør lese.</b></p>
                 <p>Ta kontakt med din nærmeste leder som vil undersøke om du har rett til innsyn i dokumentet.</p>
                 <p><b>Jeg får melding om "Finner ikke elevmappe. Kontakt arkivet"</b></p>
